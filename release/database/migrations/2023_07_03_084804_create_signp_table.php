@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateSignpTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('signp', function   ( Blueprint $table ) {
+			$table->increments('id');
+			$table->string('f_name');
+			$table->string('f_phone');
+			$table->string('f_email');
+			$table->string('f_password');
+			
+	});
+
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('signp', function (Blueprint $table) {
+            //
+        });
+    }
+}
